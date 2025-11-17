@@ -1,10 +1,14 @@
-import { Injectable, inject } from '@angular/core';
+import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from '../services/auth';
+import { firstValueFrom } from 'rxjs';
 
 export const MedidorGuard: CanActivateFn = async (route, state) => {
   const authService = inject(AuthService);
   const router = inject(Router);
+
+  // Esperar a que se cargue el estado del usuario
+  await firstValueFrom(authService.userLoaded$);
 
   const user = authService.currentUser;
   
@@ -18,7 +22,7 @@ export const MedidorGuard: CanActivateFn = async (route, state) => {
   if (rol === 'Medidor') {
     return true;
   } else {
-    router.navigate(['/home']);
+    router.navigate(['/medidor']);
     return false;
   }
 };

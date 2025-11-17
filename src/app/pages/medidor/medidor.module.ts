@@ -8,6 +8,8 @@ import { MedidorPageRoutingModule } from './medidor-routing.module';
 
 import { MedidorPage } from './medidor.page';
 
+import { ImagenModalComponent } from '../../components/imagen-modal/imagen-modal.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { MedidorPage } from './medidor.page';
     IonicModule,
     MedidorPageRoutingModule
   ],
-  declarations: [MedidorPage]
+  declarations: [MedidorPage, ImagenModalComponent]
 })
 export class MedidorPageModule {}

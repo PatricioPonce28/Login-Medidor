@@ -35,3 +35,20 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+// Estilos para modal de imagen
+.imagen-modal {
+  .alert-wrapper {
+    max-width: 90%;
+    
+    .alert-message {
+      max-height: 500px;
+      overflow: hidden;
+      
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

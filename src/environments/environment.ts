@@ -9,10 +9,5 @@ export const environment = {
   appId: "1:1183907335:web:fa36040be74c65c1a8b4a2",
   measurementId: "G-K52J4EXRCV"
 },
-  cloudinary: {
-    cloudName: 'dogqlofm3',       
-    uploadPreset: 'Mediciones',  
-    apiKey: '163526523868144'         
-  }
 };
 

@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'registro-medidor',
     loadChildren: () => import('./pages/registro-medidor/registro-medidor.module').then( m => m.RegistroMedidorPageModule)
   },
+  {
+    path: 'registro-admin',
+    loadChildren: () => import('./pages/registro-admin/registro-admin.module').then( m => m.RegistroAdminPageModule)
+  },
 ];
 
 @NgModule({
